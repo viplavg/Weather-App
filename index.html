@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body onload="defaultCity()">
+    
+
+    <section class="container">
+        <div class="weather_container">
+            <div class="weather">
+                <div class="content">
+                    <p>open.weather</p>
+                    <div class="temp_details">
+                        <h1 id="temperature">26<span>&#176;</span></h1>
+                        <div class="city_date">
+                            <h1 id="city">Delhi</h1>
+                            <span id="date_details">12:00 - Tuesday, 12 April'22</span>
+                        </div>
+                        <div class="icon_div">
+                            <img id="icon" src="" alt="weather_icon">
+                            <p id="type">Sunny</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather_details">
+                <div class="upper">
+                    <div class="input">
+                        <input id="inp" type="text" placeholder="Search Location">
+                        <button onclick="getData()">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                    <ul>
+                        <li id="Mumbai" onclick="getData(id)">Mumbai</li>
+                        <li id="Bangalore" onclick="getData(id)">Bangalore</li>
+                        <li id="New Delhi" onclick="getData(id)">New Delhi</li>
+                        <li id="Chennai" onclick="getData(id)">Chennai</li>
+                    </ul>
+                    <hr>
+                </div>
+                <div class="details">
+                    <p>Weather Details</p>
+                    <ul>
+                        <li>
+                            <p>Humidity</p>
+                            <span id="humidity">2</span>
+                        </li>
+                        <li>
+                            <p>Max. Temperature</p>
+                            <span id="max_temp">29</span>
+                        </li>
+                        <li>
+                            <p>Min. Temperature</p>
+                            <span id="min_temp">29</span>
+                        </li>
+                        <li>
+                            <p>Feels Like</p>
+                            <span id="feels_like">29</span>
+                        </li>
+                        <li>
+                            <p>Description</p>
+                            <span id="description">29</span>
+                        </li>
+                        <li>
+                            <p>Wind</p>
+                            <span id="wind">5</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./app.js"></script>
+</body>
+</html>
